@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Zbiór filmów</h1></center>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <center>
+      <div class="digg_pagination">
+      <div class="page_info">
+        <%= page_entries_info @posts %>
+      </div>
+      <%= will_paginate @posts, :container => false %>
+  </div>
+  </center>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.description %></td>
+        <td><%= movie.year %></td>
+        <td>
+          <%= link_to 'Pokaż', movie, class: 'success small button' %>
+        </td>
+        <td>
+          <%= link_to 'Edytuj', edit_movie_path(movie), class: 'warning small button' %>
+        </td>
+        <td>
+          <%= link_to 'Zniszcz', movie, method: :delete, data: { confirm: 'Are you sure?' },class: 'alert small button' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>
