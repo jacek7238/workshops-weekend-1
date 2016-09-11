@@ -1,3 +1,11 @@
-<h1><center>Witaj w naszej bazie filmowej</center></h1>
-<%= @hello_world %>
-<%= link_to "Movies", movies_path %>
+<div class="container">
+  <div class="background"></div>
+  <div class="app-name">Hello</div>
+  <div class="sign-in-button">
+    <%= link_to 'Dodaj film', new_movie_path, class: 'button landing' %>
+    <%= link_to 'Lista filmów', movies_path, class: 'button list' %>
+  </div>
+</div>
+ <!--<h1><center></center></h1>-->
+ <!--<%= @hello_world %>-->
+ <!--<%= link_to "Movies", movies_path %>-->
