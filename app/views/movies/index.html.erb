@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<center><h1>Zbiór filmów</h1></center>
-
-
+<center><h1>Zbiór filmów</h1>
+  <% if current_user %>
+<div>
+  Twój adres e-mail: <%= current_user.email %> <br>
+  <%= link_to 'Wyloguj się', destroy_user_session_path, method: :delete %>
+</div>
+  <% end %>
+</center>
 <table>
   <thead>
     <tr>

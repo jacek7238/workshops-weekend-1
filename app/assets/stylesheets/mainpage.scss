@@ -60,12 +60,22 @@
   color: white
 }
 
+.button.zaloguj {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  background-color: #ff79d3;
+  color: white
+}
+
 .button.landing:hover {
   background-color: #ffffff;
   color: black
 }
 
-.button.list:hover {
+.button.list:hover, .button.zaloguj:hover {
   background-color: #ffffff;
   color: black
 }
+
