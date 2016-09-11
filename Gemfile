@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-
+ruby '2.3.1'
 gem 'will_paginate', '~> 3.1.0'
 gem 'foundation-rails'
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
 # Use SCSS for stylesheets
